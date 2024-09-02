@@ -24,24 +24,7 @@ $ajustesBtn.addEventListener("click", () => {
   pestañaAjustes();
 });
 
-function pestañaAjustes() {
-  const $back = document.createElement("i");
-  $back.innerHTML = `<i class="fa-solid fa-gear active"></i>Settings`;
-  const view = document.createElement("div");
-  view.appendChild($back);
-  $back.addEventListener("click", () => {
-    view.remove();
-  });
-  view.classList.toggle("ajustes-active");
-  $appView.appendChild(view);
-  const $ajustesOption = document.createElement("");
-  $ajustesOption.classList.add("ajustes-option");
-  $ajustesOption.innerText = "Desactivar Colorimetria";
-  $ajustesOption.addEventListener("active", () => {
-    desactivarColorimetria();
-  });
-  view.appendChild($ajustesOption);
-}
+
 
 function controladorDeCalor(grados) {
   function clear() {
